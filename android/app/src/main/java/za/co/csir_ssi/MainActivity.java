@@ -17,6 +17,13 @@ public class MainActivity extends ReactActivity {
     // This is required for expo-splash-screen.
     setTheme(R.style.AppTheme);
     super.onCreate(null);
+
+    try {
+      Os.setenv("EXTERNAL_STORAGE", getExternalFilesDir(null).getAbsolutePath(), true);
+      System.loadLibrary("indy");
+    } catch (ErrnoException e) {
+      e.printStackTrace();
+    }
   }
 
   /**
