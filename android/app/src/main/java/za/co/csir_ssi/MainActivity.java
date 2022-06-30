@@ -2,6 +2,9 @@ package za.co.csir_ssi;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.system.ErrnoException;
+import android.system.Os;
+import java.io.File;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
