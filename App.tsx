@@ -16,10 +16,10 @@ const config: InitConfig = {
 }
 
 export default function App() {
-  // const agent = new Agent(config, agentDependencies);
-  // agent.registerOutboundTransport(new WsOutboundTransport());
-  // agent.registerOutboundTransport(new HttpOutboundTransport());
-  // const initialize = async () => await agent.initialize().catch(console.error);
+  const agent = new Agent(config, agentDependencies);
+  agent.registerOutboundTransport(new WsOutboundTransport());
+  agent.registerOutboundTransport(new HttpOutboundTransport());
+  const initialize = async () => await agent.initialize().catch(console.error);
   return (
     <View style={styles.container}>
       <Text>SSI DEMO! </Text>
